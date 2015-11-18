@@ -305,6 +305,12 @@ zinstall uinstall install: vmlinux
 
 dtbs: scripts
 	$(Q)$(MAKE) $(build)=$(boot) MACHINE=$(MACHINE) $(boot)/$@
+	$(Q)$(MAKE) $(build)=$(boot)/dts/project/14001_HW dtbs
+	$(Q)$(MAKE) $(build)=$(boot)/dts/project/15055_HW_11 dtbs
+	$(Q)$(MAKE) $(build)=$(boot)/dts/project/15055_HW_12 dtbs
+	$(Q)$(MAKE) $(build)=$(boot)/dts/project/15055_HW_13 dtbs
+	$(Q)$(MAKE) $(build)=$(boot)/dts/project/15055_HW_14 dtbs
+	$(Q)$(MAKE) $(build)=$(boot)/dts/project/15055_HW_15 dtbs
 
 zImage-dtb: vmlinux scripts
 	$(Q)$(MAKE) $(build)=$(boot) MACHINE=$(MACHINE) $(boot)/$@
